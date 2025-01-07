@@ -1,7 +1,7 @@
 
 
 import React, { useEffect, useState, useContext } from 'react';
-import { ProductContext } from '../../auth/Context/context';
+import { ProductContext } from '../../auth/Context/Context';
 import { useNavigate, useParams } from 'react-router-dom';  // Import useNavigate
 import classes from './Allcategory.module.scss';
 import Footer from '../../common/Layout/Footer/Footer';
