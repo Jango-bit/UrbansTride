@@ -1,0 +1,124 @@
+// OrderSection Styles
+.orderContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  
+    // Title
+    .orderTitle {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    // Order Info Section
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+  
+    strong {
+      font-weight: bold;
+      color: #222;
+    }
+  
+    // Order Items List
+    .orderItems {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+  
+    .orderItem {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      width: 48%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  
+      // Image Styling
+      .orderItemImage {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+  
+      // Item Name
+      .orderItemName {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+      }
+  
+      // Price, Quantity, Total Info
+      .orderItemPrice,
+      .orderItemQuantity,
+      .orderItemTotal {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 6px;
+      }
+  
+      .orderItemTotal {
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  
+    // Order Summary Section
+    .orderSummary {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #f3f3f3;
+      border-radius: 8px;
+      text-align: center;
+  
+      h3 {
+        font-size: 18px;
+        color: #444;
+        margin-bottom: 8px;
+      }
+  
+      // Total Price Styling
+      h3:last-child {
+        font-size: 20px;
+        font-weight: bold;
+        color: #222;
+      }
+    }
+  }
+  
+  // Mobile Responsiveness
+  @media (max-width: 768px) {
+    .orderContainer {
+      padding: 15px;
+    }
+  
+    .orderItems {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .orderItem {
+      width: 100%;
+    }
+  
+    .orderSummary h3 {
+      font-size: 16px;
+    }
+  
+    .orderSummary h3:last-child {
+      font-size: 18px;
+    }
+  }
+  

@@ -1,0 +1,30 @@
+/* InputField.scss */
+.inputField {
+    margin-bottom: 16px;
+  }
+  
+  .inputLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a4a4a;
+  }
+  
+  .input {
+    margin-top: 8px;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  
+   
+  }
+  .inputError {
+    border-color: #ff0000;
+  }
+  .errorText {
+    font-size: 0.75rem;
+    color: #ff0000;
+  }
+  

@@ -1,0 +1,318 @@
+// // CartPage.module.scss
+// .cartContainer {
+//     padding: 20px;
+//     background-color: #f9f9f9;
+//     border-radius: 8px;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     max-width: 1200px;
+//     margin: 20px auto;
+//   }
+  
+//   .cartHeader {
+//     font-size: 2rem;
+//     font-weight: bold;
+//     margin-bottom: 20px;
+//   }
+  
+//   .cartEmptyMessage {
+//     font-size: 1.2rem;
+//     color: #888;
+//   }
+  
+//   .cartItem {
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: 15px;
+//     padding: 10px;
+//     background-color: #fff;
+//     border-radius: 6px;
+//     border: 1px solid #ddd;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+//   }
+  
+//   .cartItemImage {
+//     width: 70px;
+//     height: auto;
+//     margin-right: 20px;
+//   }
+  
+//   .cartItemDetails {
+//     flex-grow: 1;
+//   }
+  
+//   .cartItemName {
+//     font-size: 1rem;
+//     font-weight: bold;
+//   }
+  
+//   .cartItemPrice {
+//     font-size: 0.9rem;
+//     color: #555;
+//   }
+  
+//   .cartItemQuantity {
+//     font-size: 0.9rem;
+//     color: #333;
+//   }
+  
+//   .removeButton {
+//     background-color: #f44336;
+//     color: white;
+//     border: none;
+//     padding: 5px 10px;
+//     cursor: pointer;
+//     border-radius: 4px;
+//     transition: background-color 0.3s;
+  
+//     &:hover {
+//       background-color: #d32f2f;
+//     }
+//   }
+  
+//   .totalPrice {
+//     font-size: 1.5rem;
+//     font-weight: bold;
+//     margin-top: 20px;
+//     text-align: right;
+//   }
+  
+
+
+// Base styling for the container
+.cartContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    .cartTitle {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .cartItems {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .cartItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      
+      .cartItemCard {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+      }
+  
+      .cartItemImage {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+  
+      .cartItemName {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+      }
+  
+      .cartItemPrice,
+      .cartItemQuantity {
+        font-size: 1rem;
+        color: #777;
+      }
+  
+      .cartItemTotal {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+  
+    .cartEmpty {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #888;
+      margin-top: 20px;
+    }
+  
+    .cartSummary {
+      margin-top: 40px;
+      border-top: 2px solid #ddd;
+      padding-top: 20px;
+  
+      .summaryTitle {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+      }
+  
+      .summaryDetails {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+  
+        p {
+          margin: 0;
+        }
+  
+        p:first-child {
+          font-weight: bold;
+        }
+  
+        p:last-child {
+          color: #333;
+        }
+      }
+    }
+  }
+
+.removeItemBtn {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #c53030; 
+    }
+  }
+  
+  /* Clear Cart Button */
+  .clearCartBtn {
+    background-color: #3182ce; /* Blue color for Clear Cart button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #2b6cb0; /* Darker blue on hover */
+    }
+    .decreaseIncreaseWrapper {
+        display: flex;
+        flex-direction: column; /* Stack the buttons vertically */
+        align-items: center; /* Center the buttons horizontally */
+        justify-content: center; /* Center the buttons vertically within the container */
+        margin: 10px 0; /* Add some space between the buttons */
+      }
+      
+      .decreaseBtn, .increaseBtn {
+        background-color: #f0f0f0; /* Light grey background */
+        border: 1px solid #ccc; /* Grey border */
+        font-size: 18px; /* Smaller font size */
+        padding: 8px 14px; /* Reduced padding */
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0; /* Space between the buttons */
+        border-radius: 4px; /* Slightly rounded corners */
+        outline: none; /* Remove outline for focus states */
+      }
+      
+      .decreaseBtn:hover, .increaseBtn:hover {
+        background-color: #e0e0e0; /* Light grey on hover */
+        transform: scale(1.1); /* Slightly bigger when hovered */
+      }
+      
+      .decreaseBtn:disabled, .increaseBtn:disabled {
+        cursor: not-allowed; /* Change cursor to not-allowed when disabled */
+        opacity: 0.5; /* Make buttons semi-transparent when disabled */
+      }
+      
+      .decreaseBtn {
+        color: #d9534f; /* Red color for decrease button */
+      }
+      
+      .increaseBtn {
+        color: #5bc0de; /* Blue color for increase button */
+      }
+    }
+    .buyAllBtn {
+        background-color: #38a169; /* Green color for the Buy All button */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s, transform 0.2s ease-in-out;
+      
+        &:hover {
+          background-color: #2f855a; /* Darker green on hover */
+          transform: scale(1.05); /* Slightly bigger on hover */
+        }
+      
+        &:focus {
+          outline: none; /* Remove outline when the button is focused */
+        }
+      }
+      // Orders Button Styles
+.ordersButton {
+  background-color: #4CAF50; // Green background
+  color: white; // White text color
+  font-size: 16px; // Text size
+  padding: 12px 24px; // Vertical and horizontal padding
+  border: none; // No border
+  border-radius: 8px; // Rounded corners
+  cursor: pointer; // Show pointer cursor on hover
+  transition: background-color 0.3s ease, transform 0.2s ease; // Smooth transition for color change and scaling
+
+  // Add shadow for a slightly elevated look
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  // Center the button text vertically and horizontally
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  // Remove outline on focus (optional)
+  &:focus {
+    outline: none;
+  }
+
+  // Hover effect - darken background and scale the button
+  &:hover {
+    background-color: #45a049; // Slightly darker green on hover
+    transform: translateY(-2px); // Slightly lift the button when hovered
+  }
+
+  // Active effect - scale the button down a little
+  &:active {
+    transform: translateY(1px); // Button 'click' effect
+  }
+
+  // Disabled button style
+  &:disabled {
+    background-color: #ccc; // Grey background
+    cursor: not-allowed; // Disable pointer cursor
+    box-shadow: none; // No shadow when disabled
+  }
+}

@@ -1,0 +1,86 @@
+// Color Variables
+$primary-color: #000000;
+$secondary-color: #000000;
+$background-gradient: linear-gradient(135deg, #000000, #000000);
+$button-hover-color: #000000;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+// Font and Spacing
+$font-family: 'Arial', sans-serif;
+$spacing-unit: 20px;
+$border-radius: 10px;
+
+// Main container styling
+.thank-you-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $background-gradient; // Gradient background for a lively effect
+  font-family: $font-family;
+  padding: $spacing-unit;
+}
+
+// Thank You box styling
+.thank-you-box {
+  background-color: white;
+  padding: $spacing-unit * 2;
+  border-radius: $border-radius;
+  box-shadow: 0 8px 20px $shadow-color;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 1.5s ease-out;
+}
+
+// Title styling
+.thank-you-title {
+  font-size: 36px;
+  color: $primary-color;
+  margin-bottom: $spacing-unit;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// Message styling
+.thank-you-message {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: $spacing-unit * 2;
+  line-height: 1.5;
+}
+
+// Button styling
+.thank-you-button {
+  background-color: $primary-color;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+
+  &:hover {
+    background-color: $button-hover-color;
+    transform: scale(1.05); // Slight scaling effect on hover
+  }
+
+  &:focus {
+    outline: none; // Remove focus outline for better aesthetics
+  }
+}
+
+// Fade-in animation
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

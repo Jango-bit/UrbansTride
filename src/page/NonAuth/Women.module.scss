@@ -1,0 +1,89 @@
+.productList{
+    padding: 30px;
+  }
+.productsublist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  // Set exactly 4 columns per row
+    gap: 20px;
+    width: 100%;
+    // padding: px;
+  }
+  
+  .productCard {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-5px); /* Adds hover effect */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures image fills the space while maintaining aspect ratio */
+    }
+  }
+  
+  .productInfo {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .productTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .productDescription {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds ellipsis if description is too long */
+  }
+  
+  .productPrice {
+    font-size: 16px;
+    color: #111;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .productPrice strong {
+    color: #f45d5d;
+  }
+  
+  @media (max-width: 768px) {
+    .productList {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller cards on mobile */
+    }
+  
+    .productTitle {
+      font-size: 16px; /* Slightly smaller title on mobile */
+    }
+  
+    .productPrice {
+      font-size: 14px; /* Smaller price text on mobile */
+    }
+  }
+  

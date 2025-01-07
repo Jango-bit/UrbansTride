@@ -1,0 +1,343 @@
+// .Line{
+//     display: flex;
+//     justify-content: center;
+//     font-size: 50px;
+//     font-weight: bold;
+// }
+// .p{
+//     display: flex;
+//     justify-content: center;
+//     font-size: 20px;
+// }
+// .button{
+//     position: absolute;
+//     left: 44%;
+//     color: white;
+//     background-color: black;
+//     width: 9%;
+//     height: 4%;
+//     border-radius: 5%;
+//     cursor: pointer;
+// }
+// .imageParent{
+//     padding: 2px;
+//     position: absolute;
+// display:  flex;
+
+// width:  100%;
+// height: 900px;
+// }
+// .imageRight{
+
+// }
+// .imagess{
+//     // position:absolute;
+//     // bottom:-810px;
+//     // left: 300px;
+//     // padding: 10px;
+//     // width: 50%;
+//     // height: 70%;
+// }
+// .imagess1{
+//     // position:absolute;
+//     // left: 700px;
+//     // padding: 20px;
+//     width: 100%;
+//     height: 50%;
+//     object-fit: cover;  
+// }
+// .imagess2{
+//     // padding: 20px;
+//     width: 100%;
+//     height: 50%;
+//     object-fit: cover;
+// }
+// .body{
+//     overflow-y: hidden;
+// }
+// .heroContainer {
+//     background-color: #f8f8f8;
+//     text-align: center;
+//     padding: 50px 20px;
+//     position: relative;
+//     overflow: hidden;
+  
+//     .line {
+//       font-size: 3rem;
+//       font-weight: bold;
+//       color: #333;
+//       text-transform: uppercase;
+//       margin-bottom: 10px;
+//     }
+  
+//     .description {
+//       font-size: 1.25rem;
+//       color: #555;
+//       margin-bottom: 20px;
+//       max-width: 600px;
+//       margin-left: auto;
+//       margin-right: auto;
+//     }
+  
+//     .shopButton {
+//       background-color: #ffcc00;
+//       color: #333;
+//       padding: 15px 30px;
+//       font-size: 1.25rem;
+//       border: none;
+//       border-radius: 5px;
+//       cursor: pointer;
+//       text-transform: uppercase;
+//       transition: background-color 0.3s ease;
+  
+//       &:hover {
+//         background-color: #e6b800;
+//       }
+//     }
+  
+// }  
+// .footer{
+//     overflow: hidden;
+// }
+
+// Hero.module.scss
+
+$primary-bg-color: #fff;
+$secondary-bg-color: #f4f4f4;
+$button-bg-color: #333;
+$button-hover-bg-color: #555;
+$transition-duration: 0.6s;
+$border-radius: 12px;
+
+.heroContainer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: $secondary-bg-color;
+
+  .line {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .shopButton {
+    padding: 15px 30px;
+    background-color: $button-bg-color;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $button-hover-bg-color;
+    }
+  }
+
+  .trendingSection {
+    margin-top: 40px;
+    text-align: center;
+
+    h3 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+  }
+}
+
+.slideshow {
+  position: relative;
+  width: 80%; /* Adjust to fit your design */
+  height: 500px; /* Increased height for larger image display */
+  overflow: hidden;
+  border-radius: $border-radius;
+  margin: 0 auto;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity $transition-duration ease-in-out, transform $transition-duration ease-in-out;
+  opacity: 0;
+  animation: fadeInOut 15s infinite;
+  
+  /* Adding zoom effect on transition */
+  transform: scale(1.1);
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.imageRight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trendingImage {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+// Hero.module.scss
+
+$primary-bg-color: #fff;
+$secondary-bg-color: #f4f4f4;
+$button-bg-color: #333;
+$button-hover-bg-color: #555;
+$primary-text-color: #333;
+$secondary-text-color: #666;
+$highlight-color: #ff6347; // Tomato color for accent
+$transition-duration: 0.6s;
+$border-radius: 12px;
+
+.heroContainer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: $secondary-bg-color;
+  position: relative;
+}
+
+.line {
+  font-size: 50px;
+  font-weight: 700;
+  color: $primary-text-color;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, $highlight-color, #ff9000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+  }
+}
+
+.description {
+  font-size: 20px;
+  color: $secondary-text-color;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    color: $highlight-color;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.shopButton {
+  padding: 15px 30px;
+  background-color: $button-bg-color;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: $button-hover-bg-color;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.trendingSection {
+  margin-top: 40px;
+  text-align: center;
+
+  h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: $primary-text-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      color: $highlight-color;
+      text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+// Responsive design for text
+@media (max-width: 768px) {
+  .line {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 18px;
+    max-width: 90%;
+  }
+
+  .shopButton {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+
+  .trendingSection h3 {
+    font-size: 28px;
+  }
+}
+.body{
+  overflow: hidden;
+}

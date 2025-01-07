@@ -1,0 +1,54 @@
+/* PaymentPage.module.scss */
+.paymentPage {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .paymentForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .paymentMethod {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .paymentMethod label {
+    font-size: 16px;
+  }
+  
+  .creditCardDetails label {
+    margin-bottom: 10px;
+  }
+  
+  .creditCardDetails input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submitButton {
+    padding: 12px 20px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .submitButton:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  

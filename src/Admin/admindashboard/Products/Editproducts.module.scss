@@ -1,0 +1,133 @@
+// EditProducts.module.scss
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #f4f4f9;
+$border-color: #ddd;
+$hover-color: #2980b9;
+$button-color: #e74c3c;
+$error-color: #e74c3c;
+
+.editProductContainer {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: $background-color;
+
+  .editProductTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .editProductForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .formInput,
+  .formTextarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    &::placeholder {
+      color: #888;
+    }
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 8px rgba($primary-color, 0.4);
+    }
+  }
+
+  .formTextarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .submitBtn {
+    padding: 15px 25px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    &:active {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .errorMessage {
+    color: $error-color;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .successMessage {
+    color: $secondary-color;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+}
+
+// Media queries for responsiveness
+@media (max-width: 768px) {
+  .editProductContainer {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .editProductTitle {
+    font-size: 1.6rem;
+  }
+}
+.productImagePreview {
+  margin-top: 20px;
+}
+
+.productImage {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ccc;
+}
+
+.formInput:disabled {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+}
+
+.deleteBtn {
+  margin-top: 20px;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: darkred;
+}

@@ -1,0 +1,179 @@
+.contactus{
+    font-size: larger;
+}
+// Contact.module.scss
+
+$primary-bg-color: #000; // black background
+$secondary-bg-color: #fff; // white background
+$text-color: #fff; // white text for dark background
+$input-bg-color: #333; // dark gray background for inputs
+$button-bg-color: #444; // button background color
+$button-hover-bg-color: #555; // button hover effect color
+
+.contactus {
+  background-color: $primary-bg-color;
+  color: $text-color;
+  padding: 40px 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+}
+
+.method {
+  background-color: $secondary-bg-color;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+  text-align: center;
+
+  h3 {
+    font-size: 24px;
+    color: $primary-bg-color;
+  }
+
+  p {
+    font-size: 16px;
+    color: $primary-bg-color;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        color: $primary-bg-color;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $button-bg-color;
+        }
+      }
+    }
+  }
+}
+
+.formgroup {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 16px;
+    color: $primary-bg-color;
+    margin-bottom: 8px;
+  }
+
+  input,
+  textarea {
+    background-color: $input-bg-color;
+    color: $text-color;
+    border: 1px solid #444;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+
+    &:focus {
+      border-color: $button-bg-color;
+      outline: none;
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}
+
+button {
+  background-color: $button-bg-color;
+  color: $text-color;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $button-hover-bg-color;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+  color: $primary-bg-color;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: $secondary-bg-color;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.method {
+    background-color: $secondary-bg-color;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    h3 {
+      font-size: 24px;
+      color: $primary-bg-color;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      color: $primary-bg-color;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      
+      li {
+        display: inline-block;
+        margin-right: 15px;
+        
+        a {
+          color: $primary-bg-color;
+          text-decoration: none;
+          font-size: 18px;
+          transition: color 0.3s, transform 0.3s;
+  
+          &:hover {
+            color: $button-bg-color;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  

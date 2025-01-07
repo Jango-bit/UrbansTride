@@ -1,0 +1,90 @@
+/* Sidebar.module.scss */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #34495E; /* Deep blue-gray background */
+    color: #ecf0f1; /* Light text color */
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease-in-out; /* Smooth transition for sidebar resize */
+  }
+  
+  .sidebar:hover {
+    width: 280px; /* Expand sidebar width on hover */
+  }
+  
+  .sidebar h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #1ABC9C; /* Accent color for the heading */
+  }
+  
+  .sidebar .menu-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding-left: 20px;
+  }
+  
+  .sidebar .menu-item i {
+    margin-right: 15px;
+    font-size: 1.6rem;
+  }
+  
+  .sidebar .menu-item:hover {
+    background-color: #1ABC9C; /* Lighter green shade for hover effect */
+    transform: translateX(10px); /* Slight movement to the right on hover */
+  }
+  
+  .sidebar .menu-item:active {
+    background-color: #16A085; /* Change color when clicked */
+  }
+  
+  .sidebar .menu-item.active {
+    background-color: #16A085;
+  }
+  
+  .sidebar .menu-item:last-child {
+    margin-top: auto; /* Push Logout to the bottom */
+  }
+  
+  .sidebar .menu-item .badge {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin-left: auto;
+  }
+  
+  .sidebar .sidebar-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  /* Optional: Add responsive design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+    .sidebar h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

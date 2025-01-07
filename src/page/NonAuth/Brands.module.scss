@@ -1,0 +1,190 @@
+// Brands.module.scss
+
+$primary-bg-color: #fff;
+$secondary-bg-color: #f4f4f4;
+$hover-bg-color: #e5e5e5;
+$transition-duration: 0.6s;
+$button-bg-color: #333;
+$button-hover-bg-color: #555;
+$border-radius: 8px;
+
+.ttrendingSection {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: $secondary-bg-color;
+
+  h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+}
+
+.piimageContainer {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust based on the image size you prefer */
+  overflow: hidden; /* Hide anything outside the container */
+}
+
+.mmainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: $border-radius;
+  opacity: 0;
+  transition: opacity $transition-duration ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mmainImage:nth-child(1) {
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.mmainImage:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.mmainImage:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.navigationButtons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  button {
+    padding: 10px 20px;
+    background-color: $button-bg-color;
+    color: $primary-bg-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color $transition-duration ease-in-out;
+
+    &:hover {
+      background-color: $button-hover-bg-color;
+    }
+  }
+}
+// Defining color variables for a more minimalistic design
+$primary-color: #333; // Dark gray for text
+$highlight-color: #ff6347; // Tomato color for buttons and accents
+$background-color: #f5f5f5; // Light background color
+$button-bg-color: #333; // Dark background for buttons
+$button-hover-bg-color: #444; // Darker shade for hover state
+$transition-duration: 0.3s;
+
+// Import a Google font for better typography
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+// Main section for the image slider
+.ttrendingSection {
+  margin-top: 60px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+// Styling for the title
+.ttrendingSection h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform $transition-duration;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+// Image container for the slideshow
+.piimageContainer {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%; // Set to 100% of the parent container's width
+  height: 400px; // Fixed height to match the images' aspect ratio
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Styling for the main image to take up full size
+.mmainImage {
+  width: 100%; // Make the image take up the full width of the container
+  height: 100%; // Make the image take up the full height of the container
+  object-fit: cover; // Ensure the image covers the space without distortion
+  transition: transform $transition-duration, opacity $transition-duration;
+  object-position: center center;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Buttons for navigating through the images
+.navigationButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+
+  button {
+    background-color: $button-bg-color;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color $transition-duration, transform $transition-duration;
+
+    &:hover {
+      background-color: $button-hover-bg-color;
+      transform: translateY(-3px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// Media Query for mobile responsiveness
+@media (max-width: 768px) {
+  .ttrendingSection h3 {
+    font-size: 28px;
+  }
+
+  .piimageContainer {
+    height: 250px; // Reduced height for smaller screens
+  }
+
+  .navigationButtons {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

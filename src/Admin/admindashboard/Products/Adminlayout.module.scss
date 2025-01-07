@@ -1,0 +1,145 @@
+.adminLayout {
+    display: flex;
+    min-height: 100vh;  // Make sure the layout takes full height of the screen
+  }
+  
+  .mainContent {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px;  // Offset for sidebar width
+  }
+  
+  @media (max-width: 768px) {
+    .mainContent {
+      margin-left: 0;  // Remove margin for smaller screens (sidebar collapse)
+    }
+  }
+  .access-denied {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f4f8; /* Light gray background */
+    font-family: 'Arial', sans-serif;
+  
+    .message-box {
+      text-align: center;
+      padding: 30px 40px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      opacity: 0;
+      animation: fadeIn 1s forwards; /* Fade in animation */
+      
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #e74c3c; /* Red color */
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: #7f8c8d; /* Dark gray for the text */
+        margin-bottom: 25px;
+      }
+  
+      .go-home-btn {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideUp 1.2s forwards;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #2980b9;
+        }
+      }
+    }
+  
+    /* Fade-in effect for message box */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    /* Slide-up effect for the button */
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  .access-denied {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.1);  // A slight dark background for better visibility
+  font-family: 'Arial', sans-serif;
+}
+
+.access-denied-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.denied-heading {
+  font-size: 2rem;
+  color: #e74c3c;  // Red color for the denied message
+  margin-bottom: 1rem;
+}
+
+.denied-message {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.go-home-btn {
+  background-color: #3498db;  // Blue button color
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: #2980b9;
+  }
+}
+
+.admin-content {
+  padding: 2rem;
+  background: #ecf0f1;
+  text-align: center;
+  min-height: 100vh;
+}
