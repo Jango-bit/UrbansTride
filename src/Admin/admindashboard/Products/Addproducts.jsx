@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import styles from './AddProducts.module.scss'; // Import the SCSS module
+import styles from './Addproducts.module.scss'; // Import the SCSS module
 
 function AddProduct() {
   const [product, setProduct] = useState({
