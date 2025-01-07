@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import styles from './TotalProducts.module.scss'; // Import SCSS module
+import styles from './Totalproducts.module.scss';
 
 function TotalProducts() {
   const [products, setProducts] = useState([]);
