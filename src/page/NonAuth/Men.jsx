@@ -1,6 +1,6 @@
 
 import React, { useContext, useState, useEffect } from 'react';
-import { ProductContext } from '../../auth/Context/context';  // Ensure this path is correct
+import { ProductContext } from '../../auth/Context/Context';  // Ensure this path is correct
 import classes from './Men.module.scss';
 
 function Men() {
