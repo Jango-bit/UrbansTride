@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom'; // useNavigate to redirect after delete/update
-import styles from './EditProducts.module.scss'; // Import SCSS module
+import styles from './Editproducts.module.scss'; // Import SCSS module
 
 function EditProduct() {
   const { productId } = useParams(); // Get the productId from URL
