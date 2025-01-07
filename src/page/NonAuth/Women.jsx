@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { ProductContext } from '../../auth/Context/context'
+import { ProductContext } from '../../auth/Context/Context'
 import { useEffect } from 'react'
 import classes from './Women.module.scss'
 function Women() {

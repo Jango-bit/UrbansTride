@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ProductContext } from '../../auth/Context/Context'; // Correct import path
+import { ProductContext } from '../../auth/Context/Context';
 import classes from './Serach.module.scss';
 
 const SearchPage = () => {
